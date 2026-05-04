@@ -1,0 +1,42 @@
+{
+  "name": "@uapis/cli",
+  "version": "0.1.0",
+  "author": "UAPI",
+  "description": "LLM-first UAPI CLI with prebuilt Go binaries and npm DX",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxT-Team/uapi-cli.git"
+  },
+  "homepage": "https://github.com/AxT-Team/uapi-cli#readme",
+  "bugs": {
+    "url": "https://github.com/AxT-Team/uapi-cli/issues"
+  },
+  "bin": {
+    "uapi": "bin/uapi.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "package.json",
+    "scripts"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "optionalDependencies": {
+    "@uapis/cli-darwin-arm64": "0.1.0",
+    "@uapis/cli-darwin-x64": "0.1.0",
+    "@uapis/cli-linux-arm64": "0.1.0",
+    "@uapis/cli-linux-x64": "0.1.0",
+    "@uapis/cli-win32-x64": "0.1.0"
+  },
+  "scripts": {
+    "build:release": "node ./scripts/build-release.mjs",
+    "build:local": "node ./scripts/build-local.mjs",
+    "pack:check": "npm pack --dry-run"
+  }
+}

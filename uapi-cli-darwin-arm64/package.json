@@ -1,0 +1,29 @@
+{
+  "name": "@uapis/cli-darwin-arm64",
+  "version": "0.1.0",
+  "author": "UAPI",
+  "description": "macOS arm64 binary for @uapis/cli",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxT-Team/uapi-cli.git"
+  },
+  "homepage": "https://github.com/AxT-Team/uapi-cli#readme",
+  "bugs": {
+    "url": "https://github.com/AxT-Team/uapi-cli/issues"
+  },
+  "files": [
+    "bin",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ]
+}

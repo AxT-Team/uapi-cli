@@ -1,0 +1,84 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: uapi-cli/go.mod
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Test Go CLI
+        working-directory: uapi-cli
+        run: go test ./...
+
+      - name: Build release binaries
+        working-directory: uapi-cli-npm
+        run: npm run build:release
+
+      - name: Pack wrapper package
+        working-directory: uapi-cli-npm
+        run: npm pack --dry-run
+
+      - name: Pack platform packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          for dir in \
+            uapi-cli-win32-x64 \
+            uapi-cli-linux-x64 \
+            uapi-cli-linux-arm64 \
+            uapi-cli-darwin-x64 \
+            uapi-cli-darwin-arm64
+          do
+            (cd "$dir" && npm pack --dry-run)
+          done
+
+      - name: Smoke test npm wrapper
+        run: node ./uapi-cli-npm/bin/uapi.js schema post-image-ocr --format json > /tmp/uapi-schema.json
+
+      - name: Smoke test Python wrapper
+        run: python ./uapi_llm_cli.py discover ocr > /tmp/uapi-llm.json
+
+      - name: Publish npm packages
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        run: |
+          set -euo pipefail
+          for dir in \
+            uapi-cli-win32-x64 \
+            uapi-cli-linux-x64 \
+            uapi-cli-linux-arm64 \
+            uapi-cli-darwin-x64 \
+            uapi-cli-darwin-arm64 \
+            uapi-cli-npm
+          do
+            (cd "$dir" && npm publish --access public --provenance)
+          done
+
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+
