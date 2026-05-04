@@ -1,5 +1,7 @@
 # Uapi CLI
 
+![Uapi CLI Banner](./banner.png)
+
 **[Uapipro (uapis.cn)](https://uapis.cn)** 的 LLM 优先命令行工具与原生 SDK。
 
 底层由 Go 原生编译，内置完整的 OpenAPI 索引。它不仅是开发者的终端 API 调试工具，更是专为大语言模型和 AI Agent 设计的标准化工具执行工具哟。

@@ -1,18 +1,12 @@
 # Uapi CLI
 
+![Uapi CLI Banner](./banner.png)
+
 **[Uapipro (uapis.cn)](https://uapis.cn)** 的 LLM 优先命令行工具与原生 SDK。
 
-底层由 Go 原生编译，内置完整的 OpenAPI 索引。它不仅是开发者的终端 API 调试工具，更是**专为大语言模型和 AI Agent 设计的标准化工具执行工具哟**。
+底层由 Go 原生编译，内置完整的 OpenAPI 索引。它不仅是开发者的终端 API 调试工具，更是专为大语言模型和 AI Agent 设计的标准化工具执行工具哟。
 
-通过接入本 CLI，您可以零代码为您的 AI 赋予 UAPI 平台的全量 API 能力：允许 AI 自主检索可用接口、读取参数规范，并直接执行获取实时互联网数据、OCR 图像识别、文件上传与二进制媒体流下载等复杂任务。
-
-## 特性
-
-- **为 LLM 优化的输出结构**：非交互式（非 TTY）环境下，默认输出紧凑的 `llm` 格式 JSON，精准匹配大模型上下文窗口，大幅减少 Token 消耗。
-- **极速冷启动**：Go 原生二进制执行，告别运行时解析 `openapi.yaml` 的性能损耗，满足 AI 高频并发调用的低延迟要求。
-- **智能参数路由**：使用 `--set` 传参，AI 或开发者无需分辨参数位于 Query 还是 Body 中，底层自动完成规范化路由，极大降低 AI 构造请求的错误率。
-- **开箱即用的多模态支持**：原生支持 Multipart 本地文件上传与二进制数据流存储（如图片下载），复杂请求结构支持读取 `.json` 文件。
-- **多平台跨语言**：通过 npm 极简分发，并提供 Python 兼容包装层，无缝对接 LangChain / AutoGPT 等 AI 框架。
+通过接入本 CLI，您可以让您的 Agent 拥有 UAPI 平台的全量 API 能力。助力您更好的完成工作。
 
 ## 安装
 
@@ -36,6 +30,14 @@ npx uapi-cli discover ocr
 python uapi_sdk_cli.py llm discover ocr
 python uapi_llm_cli.py discover ocr
 ```
+
+## 特性
+
+- **为 LLM 优化的输出结构**：非交互式（非 TTY）环境下，默认输出紧凑的 `llm` 格式 JSON，精准匹配大模型上下文窗口，大幅减少 Token 消耗。
+- **极速冷启动**：Go 原生二进制执行，告别运行时解析 `openapi.yaml` 的性能损耗，满足 AI 高频并发调用的低延迟要求。
+- **智能参数路由**：使用 `--set` 传参，AI 或开发者无需分辨参数位于 Query 还是 Body 中，底层自动完成规范化路由，极大降低 AI 构造请求的错误率。
+- **开箱即用的多模态支持**：原生支持 Multipart 本地文件上传与二进制数据流存储（如图片下载），复杂请求结构支持读取 `.json` 文件。
+- **多平台跨语言**：通过 npm 极简分发，并提供 Python 兼容包装层，无缝对接 LangChain / AutoGPT 等 AI 框架。
 
 ## 命令参考
 
