@@ -1,3 +1,3 @@
-# @uapis/cli-win32-x64
+# uapi-cli-win32-x64
 
-Platform binary package for `@uapis/cli`.
+Platform binary package for `uapi-cli`.

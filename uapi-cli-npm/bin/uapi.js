@@ -11,23 +11,23 @@ const root = dirname(here)
 
 const targets = {
   'darwin-arm64': {
-    packageName: '@uapis/cli-darwin-arm64',
+    packageName: 'uapi-cli-darwin-arm64',
     relativeDevPath: join(root, '..', 'uapi-cli-darwin-arm64', 'bin', 'uapi'),
   },
   'darwin-x64': {
-    packageName: '@uapis/cli-darwin-x64',
+    packageName: 'uapi-cli-darwin-x64',
     relativeDevPath: join(root, '..', 'uapi-cli-darwin-x64', 'bin', 'uapi'),
   },
   'linux-arm64': {
-    packageName: '@uapis/cli-linux-arm64',
+    packageName: 'uapi-cli-linux-arm64',
     relativeDevPath: join(root, '..', 'uapi-cli-linux-arm64', 'bin', 'uapi'),
   },
   'linux-x64': {
-    packageName: '@uapis/cli-linux-x64',
+    packageName: 'uapi-cli-linux-x64',
     relativeDevPath: join(root, '..', 'uapi-cli-linux-x64', 'bin', 'uapi'),
   },
   'win32-x64': {
-    packageName: '@uapis/cli-win32-x64',
+    packageName: 'uapi-cli-win32-x64',
     relativeDevPath: join(root, '..', 'uapi-cli-win32-x64', 'bin', 'uapi.exe'),
   },
 }

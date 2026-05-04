@@ -1,8 +1,8 @@
 {
-  "name": "@uapis/cli-darwin-x64",
-  "version": "0.1.0",
+  "name": "uapi-cli-darwin-x64",
+  "version": "0.1.1",
   "author": "UAPI",
-  "description": "macOS x64 binary for @uapis/cli",
+  "description": "macOS x64 binary for uapi-cli",
   "type": "module",
   "repository": {
     "type": "git",

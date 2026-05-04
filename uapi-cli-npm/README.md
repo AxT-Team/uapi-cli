@@ -19,13 +19,13 @@
 **推荐：全局安装（需 Node.js 环境）**
 
 ```bash
-npm i -g @uapis/cli
+npm i -g uapi-cli
 ```
 
 **单次免安装执行**
 
 ```bash
-npx @uapis/cli discover ocr
+npx uapi-cli discover ocr
 ```
 
 **Python AI 框架兼容调用**

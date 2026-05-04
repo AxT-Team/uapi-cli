@@ -1,8 +1,8 @@
 {
-  "name": "@uapis/cli-linux-arm64",
-  "version": "0.1.0",
+  "name": "uapi-cli-linux-arm64",
+  "version": "0.1.1",
   "author": "UAPI",
-  "description": "Linux arm64 binary for @uapis/cli",
+  "description": "Linux arm64 binary for uapi-cli",
   "type": "module",
   "repository": {
     "type": "git",

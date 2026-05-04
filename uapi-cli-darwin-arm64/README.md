@@ -1,3 +1,3 @@
-# @uapis/cli-darwin-arm64
+# uapi-cli-darwin-arm64
 
-Platform binary package for `@uapis/cli`.
+Platform binary package for `uapi-cli`.

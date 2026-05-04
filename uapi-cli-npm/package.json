@@ -1,6 +1,6 @@
 {
-  "name": "@uapis/cli",
-  "version": "0.1.0",
+  "name": "uapi-cli",
+  "version": "0.1.1",
   "author": "UAPI",
   "description": "LLM-first UAPI CLI with prebuilt Go binaries and npm DX",
   "type": "module",
@@ -28,11 +28,11 @@
     "access": "public"
   },
   "optionalDependencies": {
-    "@uapis/cli-darwin-arm64": "0.1.0",
-    "@uapis/cli-darwin-x64": "0.1.0",
-    "@uapis/cli-linux-arm64": "0.1.0",
-    "@uapis/cli-linux-x64": "0.1.0",
-    "@uapis/cli-win32-x64": "0.1.0"
+    "uapi-cli-darwin-arm64": "0.1.1",
+    "uapi-cli-darwin-x64": "0.1.1",
+    "uapi-cli-linux-arm64": "0.1.1",
+    "uapi-cli-linux-x64": "0.1.1",
+    "uapi-cli-win32-x64": "0.1.1"
   },
   "scripts": {
     "build:release": "node ./scripts/build-release.mjs",

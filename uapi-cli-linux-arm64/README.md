@@ -1,3 +1,3 @@
-# @uapis/cli-linux-arm64
+# uapi-cli-linux-arm64
 
-Platform binary package for `@uapis/cli`.
+Platform binary package for `uapi-cli`.
