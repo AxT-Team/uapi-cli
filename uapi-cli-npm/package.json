@@ -2,13 +2,13 @@
   "name": "uapi-cli",
   "version": "0.1.1",
   "author": "UAPI",
-  "description": "LLM-first UAPI CLI with prebuilt Go binaries and npm DX",
+  "description": "Official command-line client for UAPI / uapis.cn — talk to 100+ free public-API endpoints (network, text, image, social, translation, search) from your terminal. Ships prebuilt Go binaries and an LLM-friendly REPL.",
   "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AxT-Team/uapi-cli.git"
   },
-  "homepage": "https://github.com/AxT-Team/uapi-cli#readme",
+  "homepage": "https://uapis.cn/docs/cli",
   "bugs": {
     "url": "https://github.com/AxT-Team/uapi-cli/issues"
   },
@@ -38,5 +38,23 @@
     "build:release": "node ./scripts/build-release.mjs",
     "build:local": "node ./scripts/build-local.mjs",
     "pack:check": "npm pack --dry-run"
-  }
+  },
+  "license": "MIT",
+  "keywords": [
+    "uapi",
+    "uapis",
+    "uapis.cn",
+    "cli",
+    "command-line",
+    "public-api",
+    "free-api",
+    "rest",
+    "rest-api",
+    "openapi",
+    "agent",
+    "llm",
+    "ai",
+    "developer-tools",
+    "go-cli"
+  ]
 }
